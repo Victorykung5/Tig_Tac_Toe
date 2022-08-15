@@ -13,12 +13,12 @@ char mark(int a)
 }
 int main()
 {   //XO game!!!
-    int c = 1, k = 0, f = 9, d, e;
+    int c = 1, k = 0, f = 9, d, e, m;
     int x[3][3];
     int z, y = 1;
     int count = 0;
     while (y == 1)
-    {
+    {   m=0;
         count = 0;
         for (int i = 0; i < 3; i++)
         {
@@ -53,6 +53,7 @@ int main()
                 {
                     printf("Player %c is the winner!!!\n", mark(c));
                     k = -1;
+                    m++;
                     break;
                 }
             }
@@ -62,7 +63,7 @@ int main()
                 c++;
             f++;
             count++;
-            if (count == 9)
+            if (count == 9 && m == 0)
             {
                 printf("Draw!!! No one win\n");
                 break;
